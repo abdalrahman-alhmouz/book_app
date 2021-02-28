@@ -1,0 +1,39 @@
+heaer > h1 {
+    font-size: 2em;
+}
+
+.book{
+    background-color: #e7e6e1;
+    color: #111;
+    padding: 4% 1%;
+}
+
+.book img{
+    width: 70%;
+}
+
+.book p, h4, h5 {
+    margin: 5% 0;
+}
+/* ............................................ Form */
+form{
+    width:90%;
+    margin: 5% 10%; 
+    text-align:left;
+ }
+ form input, button {
+    background-color: #444;
+ 
+   padding: 5% 0;
+   color:#fff;
+}
+.radio-field{
+    display: inline-block;
+    width: 80%;
+}
+
+button {
+    background-color: #222;
+    color:#fff;
+    padding: 1% 4%;
+}
