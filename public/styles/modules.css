@@ -15,7 +15,7 @@ heaer > h1 {
 .book p, h4, h5 {
     margin: 5% 0;
 }
-/* ............................................ Form */
+/* ..................................................................... Form */
 form{
     width:90%;
     margin: 5% 10%; 
@@ -37,3 +37,66 @@ button {
     color:#fff;
     padding: 1% 4%;
 }
+
+.mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: #555;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: rgb(156, 154, 154);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #000c01;
+    color: white;
+    display: flex;
+    text-align: start;
+  }
+  #myDIV {
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: rgb(121, 102, 102);
+    margin-top: 20px;
+    display: none;
+  }
+  .stt{
+    display: flex;
+    border-radius: 5px;
+    margin: 2px;
+    align-items: center;
+    width: 80%;
+  }

@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/base.css">
-</head>
+<%- include('../../layout/head')%>
 
-<body>
-    <header id="search-result">
-        <h1> Search results </h1>
-    </header>
-    <div class="container">
-        <% booksList.forEach(item=>{ %>
-            <div>
-                <article class="book">
-                    <img src=<%=item.imgURL %> alt= <%= item.title %>>
-                        <h5> Book Title: <%= item.title %>
+    <body>
+        <header id="search-result">
+            <h1> Search results </h1>
+        </header>
+        <div class="container">
+            <% booksList.forEach(item=>{ %>
+                <div>
+                    <article class="book">
+                        <img src="<%=item.imgURL %>" alt='<%= item.title %>'>
+                        <h5>
+                            <%= item.title %>
                         </h5>
-                        <h4 class=""> Author Name: <%= item.author %>
+                        <h4 class="">
+                            <%= item.author %>
                         </h4>
-                        <p> Description : <%= item.description %>
+                        <p>
+                            <%= item.description %>
                         </p>
-                </article>
-
-            </div>
-            <% }) %>
-    </div>
-</body>
+                        <%# send data to server%>
+                            <form action="/books" method="POST">
+                                <input type="hidden" name="image" value="<%= item.imgURL %>">
+                                <input type="hidden" name="title" value="<%= item.title %>">
+                                <input type="hidden" name="author" value="<%= item.author %>">
+                                <input type="hidden" name="description" value="<%= item.description %>">
+                                <input type="hidden" name="isbn" value="<%= item.isbn %>">
+                                <input type="hidden" name="isbn" value="<%= item.id %>">
+                                <button>Select This Book</button>
+                            </form>
+                    </article>
+                </div>
+                <% }) %>
+        </div>
+    </body>
 
 </html>

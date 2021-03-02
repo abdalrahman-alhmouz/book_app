@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../../layout/head')%>
+
+    <body>
+        <section>
+            <img src=<%=item.image_url %> alt= <%= item.title %>>
+                <h5>
+                    <%= item.title %>
+                </h5>
+                <h4 class="">
+                    <%= item.author %>
+                </h4>
+                <p>
+                    <%= item.description %>
+                </p>
+                <h3>
+                    isbn: <%= item.isbn %>
+                </h3>
+        </section>
+        <div id="myDIV" >
+        <form action="/update/<%=item.id%>?_method=put" method="post">
+            <input class="stt" type="text"  name="image_url"  value="<%= item.image_url %>" >
+            <input class="stt" type="text" name="title" value="<%= item.title %>">
+            <input class="stt" type="text" name="author" value="<%= item.author %>">
+            <textarea class="stt"  name="description" cols="30" rows="10"><%= item.description %></textarea>
+            <button id="up-btn" type='submit'> Update Details</button>
+        </form>
+    </div>
+    <button onclick="klikfun()">Update</button>
+        <form action="/deletTask/ <%= item.id %>?_method=DELETE" method="POST">
+        <button type="submit" >delet task</button>
+    </form>
+
+    <script>
+        function klikfun() {
+          var x = document.getElementById("myDIV");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+           
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script>
+        
+
+    </body>
+  
+
+</html>

@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/base.css">
-</head>
+<%- include('../../layout/head')%>
 
-<body>
-    <header>
-        <h1>Search by title or author </h1>
-    </header>
-    <form action="/book" method="POST">
-        <input type="text" name="search" placeholder="Search by Title or by author ">
+    <body>
+        <header>
+            <h1>Search by title or author </h1>
+        </header>
+        <form action="/searches" method="POST">
+            <input type="text" name="search" placeholder="Search by Title or by author ">
 
-        <div class="radio-field">
-            <input type="radio" name="term" value="title">
-            <label for="title">Title </label>
-        </div>
-        <div class="radio-field">
-            <input type="radio" name="term" value="author">
-            <label for="author">Author </label>
-        </div>
-        <button type="submit">Search for Book</button>
+            <div class="radio-field">
+                <input type="radio" name="term" value="title">
+                <label for="title">Title </label>
+            </div>
+            <div class="radio-field">
+                <input type="radio" name="term" value="author">
+                <label for="author">Author </label>
+            </div>
+            <button type="submit">Search for Book</button>
 
-    </form>
+        </form>
 
-</body>
+    </body>
 
 </html>
